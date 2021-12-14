@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import './TrackList.scss';
+import Card from '../card/Card';
 
 const TrackList = () => {
   const [tracks, setTracks] = useState([]);
@@ -17,12 +18,14 @@ const TrackList = () => {
   }, []);
 
   return (
-    <div>
+    <div className="track-list">
       {tracks.map(track => (
-        <div key={track.id}>{track.name}</div>
+        <Card key={track.id} track={track} />
       ))}
     </div>
   );
 };
 
 export default TrackList;
+
+// <img key={track.id} alt="track" src={track.coverUrl} />
