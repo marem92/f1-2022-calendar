@@ -4,7 +4,7 @@ import './Card.scss';
 const Card = ({ track }) => {
   return (
     <div className="card">
-      <div class="card-media">
+      <div className="card-media">
         <img src={track.coverUrl} alt="" />
       </div>
       <div className="card-content">
